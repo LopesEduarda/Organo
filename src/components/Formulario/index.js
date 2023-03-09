@@ -1,6 +1,7 @@
 import './Formulario.css';
 import CampoTexto from '../../components/CampoTexto/index.js';
-import ListaSuspense from '../ListaSuspensa/index.js';
+import ListaSuspensa from '../ListaSuspensa/index.js';
+import Botao from '../Botao';
 
 const Formulario = () => {
 
@@ -15,7 +16,10 @@ const Formulario = () => {
                 <CampoTexto label="Nome" placeholder="Digite o seu nome" />
                 <CampoTexto label="Cargo" placeholder="Digite o seu cargo" />
                 <CampoTexto label="Imagem" placeholder="Insira uma imagem" />
-                <ListaSuspense itens={times}/>
+                <ListaSuspensa label="Times" itens={times} />
+                <Botao>
+                    Criar Card
+                </Botao>
             </form>
         </section>
     )
