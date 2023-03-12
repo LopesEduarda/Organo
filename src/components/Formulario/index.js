@@ -36,6 +36,7 @@ const Formulario = () => {
                     placeholder="Digite o seu nome"
                     valor={nome}
                     aoAlterado={valor => setNome(valor)}
+                    // o aoAlterado recebe a função Set para mudar
                 />
                 <CampoTexto
                     obrigatorio={true}
