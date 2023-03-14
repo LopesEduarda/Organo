@@ -37,6 +37,10 @@ const Formulario = () => {
                     valor={nome}
                     aoAlterado={valor => setNome(valor)}
                     // o aoAlterado recebe a função Set para mudar
+                    // isso poderia ser extraído para uma função, mas aqui a gente já tem o acesso ao valor
+                    // estamos somente setando o estado
+                    // aqui estamos fazendo um Set do nome, com o valor que recebemos no estado
+                    // ao alterado poderia ser onChange
                 />
                 <CampoTexto
                     obrigatorio={true}
