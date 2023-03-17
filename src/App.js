@@ -55,27 +55,31 @@ function App() {
 
   // função para exibir o novo colaborador adicionado, que recebe como parâmetro um colaborador
   // na linha 18, estamos passando essa função para dentro do Formulário, para conseguir acessar lá dentro através das props
- 
+
   // a chave key é usada para controlar a renderização
   return (
     <div className="App">
       <Banner />
       <Formulario
+        nomesDosTimes={times.map((time) => time.nome)}
         aoColaboradorCadastrado={(colaborador) =>
           aoNovoColaboradorAdicionado(colaborador)
         }
       />
 
       {times.map((time) => (
-        <Time 
-        key={time.nome} 
-        nome={time.nome}
-        corPrimaria={time.corPrimaria}
-        corSecundaria={time.corSecundaria}
+        <Time
+          key={time.nome}
+          nome={time.nome}
+          corPrimaria={time.corPrimaria}
+          corSecundaria={time.corSecundaria}
+          colaboradores={colaboradores.filter(colaborador => colaborador.time === time.nome)}
         />
       ))}
     </div>
   );
 }
-
+// sobre o filter dos colaboradores: filtrar os colaboradores de acordo com o time: 
+// o time do colaborador precisa ser igual ao nome do time
+// dessa forma, cada colaborador vai parar no na sua seção do site de acordo com o time do qual faz parte
 export default App;

@@ -15,16 +15,6 @@ const Formulario = (props) => {
   // hook: é algo que o React entrega pra gente para gente conseguir manter um estado dentro de uma função,
   // porque originalmente uma função não tem estado, porque ela é uma função
 
-  const times = [
-    "Programação",
-    "Front-End",
-    "Data Science",
-    "Devops",
-    "UX e Design",
-    "Mobile",
-    "Inovação e Gestão",
-  ];
-
   const aoSalvar = (evento) => {
     evento.preventDefault();
     // previne o comportamento padrão de recarregar a página
@@ -70,7 +60,7 @@ const Formulario = (props) => {
         <ListaSuspensa
           obrigatorio={true}
           label="Times"
-          itens={times}
+          itens={props.nomesDosTimes}
           valor={time}
           aoAlterado={(valor) => setTime(valor)}
         />
