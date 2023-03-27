@@ -26,6 +26,10 @@ const Formulario = (props) => {
       time,
     });
     // essa props.aoColaboradorCadastrado está no App.js e estamos recebendo aqui como props!
+    // setNome('')
+    // setCargo('')
+    // setImagem('')
+    // setTime('')
   };
 
   return (

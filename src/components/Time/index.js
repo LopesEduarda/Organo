@@ -1,6 +1,8 @@
 import "./Time.css";
 import Colaborador from "../Colaborador";
 
+// ternário!
+
 const Time = (props) => {
   return (
     // dentro das chaves do style={} abrimos outra chave {} para indicar que há uma variável ali dentro
