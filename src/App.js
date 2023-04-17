@@ -47,6 +47,10 @@ function App() {
   // estado + sua função de setter para mudar o estado, porque não é possivel mudá-lo diretamente,
   // é necessário passar pela função de setter
 
+  function deletarColaborador() {
+    console.log('função deletar colaborador');
+  }
+
   const aoNovoColaboradorAdicionado = (colaborador) => {
     console.log(colaborador);
     setColaboradores([...colaboradores, colaborador]);
@@ -74,6 +78,7 @@ function App() {
           corPrimaria={time.corPrimaria}
           corSecundaria={time.corSecundaria}
           colaboradores={colaboradores.filter(colaborador => colaborador.time === time.nome)}
+          aoDeletar={deletarColaborador}
         />
       ))}
     </div>
